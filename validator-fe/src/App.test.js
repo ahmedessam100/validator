@@ -62,9 +62,3 @@ it("renders correctly", () => {
   const tree = mount(<App />);
   expect(toJson(tree)).toMatchSnapshot();
 });
-
-it('phone number validation functioning correctly', () => {
-  const wrapper = shallow(<DataLister />);
-  let value = wrapper.instance().isValid(customer.phoneNumber, customer.code);
-  expect(value).toEqual(customer.validation);
-});
